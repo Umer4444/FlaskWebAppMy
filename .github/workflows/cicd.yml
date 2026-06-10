@@ -40,5 +40,6 @@ jobs:
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
             cd ~/app
+            sed -i "s|image: umer4444/my-app:.*|image: umer4444/my-app:${{ github.sha }}|g" docker-compose.yml
             docker compose pull
             docker compose up -d
