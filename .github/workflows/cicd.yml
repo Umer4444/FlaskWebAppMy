@@ -91,7 +91,7 @@ jobs:
             cd ~/app
  
            
-            sudo sed -i "s|image: obaidlona/myapp:.*|image: obaidlona/myapp:${{ github.sha }}|" docker-compose.yml
+            sudo sed -i "s|image: umer4444/my-app:.*|image: umer4444/my-app:${{ github.sha }}|" docker-compose.yml
  
            
             sudo docker compose pull
