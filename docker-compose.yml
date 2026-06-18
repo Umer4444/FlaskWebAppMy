@@ -1,7 +1,12 @@
-version: '3'
 services:
-  my-app:
-    image: umer4444/my-app:latest
+  flask-app-1:
+    image: umer4444/my-app:${APP1_IMAGE_TAG}
     ports:
-      - "8000:8000"
+      - "8001:8000"
+    restart: always
+
+  flask-app-2:
+    image: umer4444/my-app:${APP2_IMAGE_TAG}
+    ports:
+      - "8002:8000"
     restart: always
