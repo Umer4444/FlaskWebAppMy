@@ -37,4 +37,6 @@ def about():
     )
 @app.route('/version')
 def version():
-    return {"version": "1.0"}
+    instance = os.environ.get('INSTANCE_NAME', 'unknown')
+    app_version = os.environ.get('APP_VERSION', '1.0')
+    return {"instance": instance, "version": app_version}
